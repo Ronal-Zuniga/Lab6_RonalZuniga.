@@ -1,8 +1,16 @@
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -74,6 +82,44 @@ public class Principal extends javax.swing.JFrame {
         prg1 = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        addC = new javax.swing.JDialog();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        nc = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        prg2 = new javax.swing.JComboBox<>();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        modC = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        nc1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        prg3 = new javax.swing.JComboBox<>();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        cdl = new javax.swing.JComboBox<>();
+        listC = new javax.swing.JDialog();
+        jPanel8 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        ar = new javax.swing.JTree();
+        jLabel26 = new javax.swing.JLabel();
+        jButton9 = new javax.swing.JButton();
+        delC = new javax.swing.JDialog();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        cdl1 = new javax.swing.JComboBox<>();
+        jButton10 = new javax.swing.JButton();
+        svC = new javax.swing.JDialog();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        cdl2 = new javax.swing.JComboBox<>();
+        jButton11 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -493,6 +539,405 @@ public class Principal extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 3, 28)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel19.setText("Agregar ClaudiList");
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel20.setText("Nombre");
+
+        nc.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel21.setText("Programas");
+
+        prg2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton5.setText("Agregar Programa seleccionado a ClaudiList");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+
+        jButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton6.setText("Guardar");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(154, 154, 154))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jButton5)
+                        .addGap(56, 56, 56))))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(prg2, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nc, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jButton6)))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel19)
+                .addGap(66, 66, 66)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(95, 95, 95)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prg2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton5)
+                .addGap(90, 90, 90)
+                .addComponent(jButton6)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout addCLayout = new javax.swing.GroupLayout(addC.getContentPane());
+        addC.getContentPane().setLayout(addCLayout);
+        addCLayout.setHorizontalGroup(
+            addCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        addCLayout.setVerticalGroup(
+            addCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 3, 28)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel22.setText("Modificar ClaudiList");
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel23.setText("Nombre");
+
+        nc1.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel24.setText("Programas");
+
+        prg3.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton7.setText("Agregar Programa seleccionado a ClaudiList");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton8.setText("Guardar");
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+        });
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel25.setText("Seleccionar ClaudiList A Modificar");
+
+        cdl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(48, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(165, 165, 165))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel24)
+                                    .addComponent(jLabel23))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(prg3, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nc1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton7)
+                                .addGap(44, 44, 44)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(138, 138, 138))))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(257, 257, 257)
+                        .addComponent(jButton8))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(198, 198, 198)
+                        .addComponent(cdl, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel22)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(cdl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nc1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prg3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton7)
+                .addGap(64, 64, 64)
+                .addComponent(jButton8)
+                .addGap(68, 68, 68))
+        );
+
+        javax.swing.GroupLayout modCLayout = new javax.swing.GroupLayout(modC.getContentPane());
+        modC.getContentPane().setLayout(modCLayout);
+        modCLayout.setHorizontalGroup(
+            modCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        modCLayout.setVerticalGroup(
+            modCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("ClaudiList");
+        ar.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane2.setViewportView(ar);
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 3, 28)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel26.setText("Lista de ClaudiList");
+
+        jButton9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton9.setText("Mostrar ClaudiList");
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton9MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(147, 147, 147)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(210, 210, 210)
+                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(255, 255, 255)
+                        .addComponent(jButton9)))
+                .addContainerGap(178, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(jLabel26)
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jButton9)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout listCLayout = new javax.swing.GroupLayout(listC.getContentPane());
+        listC.getContentPane().setLayout(listCLayout);
+        listCLayout.setHorizontalGroup(
+            listCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        listCLayout.setVerticalGroup(
+            listCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 3, 28)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel27.setText("Eliminar ClaudiList");
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel28.setText("Seleccione ClaudiList a Eliminar");
+
+        cdl1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton10.setText("Eliminar");
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton10MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel28))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(cdl1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jButton10)))
+                .addContainerGap(171, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel27)
+                .addGap(54, 54, 54)
+                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(cdl1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(jButton10)
+                .addContainerGap(49, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout delCLayout = new javax.swing.GroupLayout(delC.getContentPane());
+        delC.getContentPane().setLayout(delCLayout);
+        delCLayout.setHorizontalGroup(
+            delCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        delCLayout.setVerticalGroup(
+            delCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 3, 28)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel29.setText("Guardar ClaudiList");
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(204, 0, 102));
+        jLabel30.setText("Seleccione ClaudiList a Guardar");
+
+        cdl2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+
+        jButton11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton11.setText("Guardar");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel30))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(cdl2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jButton11)))
+                .addContainerGap(145, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(jLabel29)
+                .addGap(54, 54, 54)
+                .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(cdl2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(jButton11)
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout svCLayout = new javax.swing.GroupLayout(svC.getContentPane());
+        svC.getContentPane().setLayout(svCLayout);
+        svCLayout.setHorizontalGroup(
+            svCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(svCLayout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        svCLayout.setVerticalGroup(
+            svCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(svCLayout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -591,6 +1036,11 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem7.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jMenuItem7.setText("Agregar ClaudiList");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem7);
 
         jMenuItem8.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
@@ -604,14 +1054,29 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuItem9.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jMenuItem9.setText("Listar ClaudiList");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem9);
 
         jMenuItem10.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jMenuItem10.setText("Eliminar ClaudiList");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem10);
 
         jMenuItem11.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
         jMenuItem11.setText("Guardar ClaudiList como Archivo");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem11);
 
         jMenuBar1.add(jMenu3);
@@ -637,7 +1102,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+        modC.setModal(true);
+        modC.pack();
+        modC.setLocationRelativeTo(this);
+        modC.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -668,7 +1136,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         if (np1.getText().isEmpty() || launch1.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Campos vacíos, no se ha agregado el programa");
+            JOptionPane.showMessageDialog(this, "Campos vacíos, no se ha modificado el programa");
         } else {
             Programa pr = (Programa) prg.getSelectedItem();
             String nombre = np1.getText();
@@ -738,6 +1206,187 @@ public class Principal extends javax.swing.JFrame {
         delP.setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        Programa pr = (Programa) prg2.getSelectedItem();
+        if (aux.contains(pr)) {
+            JOptionPane.showMessageDialog(this, "No se puede agregar el mismo programa dos veces");
+        } else {
+            for (int i = 0; i < p.size(); i++) {
+                if (p.get(i).equals(pr)) {
+                    aux.add(p.get(i));
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Programa agregado");
+        }
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        if (nc.getText().isEmpty() || aux.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campos vacíos O aún no ha añadido programas a la lista\n"
+                    + "La ClaudiList no se ha creado");
+            aux = new ArrayList();
+        } else {
+            String nombre = nc.getText();
+            ClaudiList c = new ClaudiList(nombre);
+            c.setProgramas(aux);
+            cl.add(c);
+            aux = new ArrayList();
+            JOptionPane.showMessageDialog(this, "ClaudiList creada correctamente");
+            nc.setText("");
+            setListas();
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        addC.setModal(true);
+        addC.pack();
+        addC.setLocationRelativeTo(this);
+        addC.setVisible(true);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        Programa pr = (Programa) prg3.getSelectedItem();
+        if (aux.contains(pr)) {
+            JOptionPane.showMessageDialog(this, "No se puede agregar el mismo programa dos veces");
+        } else {
+            for (int i = 0; i < p.size(); i++) {
+                if (p.get(i).equals(pr)) {
+                    aux.add(p.get(i));
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Programa agregado");
+        }
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+        if (nc1.getText().isEmpty() || aux.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Campos vacíos O aún no ha añadido programas a la lista\n"
+                    + "La ClaudiList no se ha modificado");
+            aux = new ArrayList();
+        } else {
+            String nombre = nc1.getText();
+            ClaudiList c = (ClaudiList) cdl.getSelectedItem();
+            for (int i = 0; i < cl.size(); i++) {
+                if (cl.get(i).equals(c)) {
+                    c.setProgramas(aux);
+                    c.setNombre(nombre);
+                }
+            }
+            aux = new ArrayList();
+            JOptionPane.showMessageDialog(this, "ClaudiList modificada correctamente");
+            nc1.setText("");
+            setListas();
+        }
+    }//GEN-LAST:event_jButton8MouseClicked
+
+    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+        DefaultMutableTreeNode raiz
+                = new DefaultMutableTreeNode("ClaudiList");
+        DefaultTreeModel modeloARBOL
+                = new DefaultTreeModel(raiz);
+
+        for (int i = 0; i < cl.size(); i++) {
+            String nombre = cl.get(i).getNombre();
+
+            int x = -1;
+            for (int j = 0; j < raiz.getChildCount(); j++) {
+                if (raiz.getChildAt(j).toString().
+                        equals(nombre)) {
+                    DefaultMutableTreeNode p
+                            = new DefaultMutableTreeNode("Programas");
+                    for (int k = 0; k < cl.get(i).getProgramas().size(); k++) {
+                        p.add(new DefaultMutableTreeNode(cl.get(i).getProgramas().get(k)));
+                    }
+                    ((DefaultMutableTreeNode) raiz.getChildAt(j)).add(p);
+                    x = 1;
+                } //fin if
+            } //fin for  
+
+            if (x == -1) {
+                DefaultMutableTreeNode n
+                        = new DefaultMutableTreeNode(nombre);
+                DefaultMutableTreeNode p = new DefaultMutableTreeNode("Programas");
+                for (int k = 0; k < cl.get(i).getProgramas().size(); k++) {
+                    p.add(new DefaultMutableTreeNode(cl.get(i).getProgramas().get(k)));
+                }
+                n.add(p);
+                raiz.add(n);
+            }  // fin if          
+            ar.setModel(modeloARBOL);
+        }
+    }//GEN-LAST:event_jButton9MouseClicked
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        listC.setModal(true);
+        listC.pack();
+        listC.setLocationRelativeTo(this);
+        listC.setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        svC.setModal(true);
+        svC.pack();
+        svC.setLocationRelativeTo(this);
+        svC.setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
+        ClaudiList c = (ClaudiList) cdl1.getSelectedItem();
+        for (int i = 0; i < cl.size(); i++) {
+            if (cl.get(i).equals(c)) {
+                cl.remove(cl.get(i));
+            }
+        }
+        JOptionPane.showMessageDialog(this, "ClaudiList eliminada correctamente");
+    }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        JFileChooser jfc = new JFileChooser();
+        FileNameExtensionFilter filtro
+                = new FileNameExtensionFilter(
+                        "Archivos de Texto", "txt");
+        jfc.addChoosableFileFilter(filtro);
+        int seleccion = jfc.showSaveDialog(this);
+        FileWriter fw = null;
+        BufferedWriter bw = null;
+        if (seleccion == JFileChooser.APPROVE_OPTION) {
+            try {
+                ClaudiList c = (ClaudiList) cdl2.getSelectedItem();
+                File fichero = new File("./" + c.getNombre() + ".txt");
+                fw = new FileWriter(fichero);
+                bw = new BufferedWriter(fw);
+                for (int i = 0; i < cl.size(); i++) {
+                    if (cl.get(i).equals(c)) {
+                        for (Programa p : cl.get(i).getProgramas()) {
+                            bw.write(p.getNombre() + "/");
+                            bw.write(p.getPuntuacion() + "/");
+                            bw.write(p.getLanzamiento() + "/");
+                            bw.write(p.getTipo() + "/");
+                            bw.write(p.getGenero() + "/" + "\n");
+                        }
+                    }
+                }
+                bw.flush();
+                JOptionPane.showMessageDialog(this,
+                        "Archivo guardado exitosamente");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            try {
+                bw.close();
+                fw.close();
+            } catch (IOException ex) {
+            }
+        }//fin IF
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        delC.setModal(true);
+        delC.pack();
+        delC.setLocationRelativeTo(this);
+        delC.setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -774,14 +1423,27 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog addC;
     private javax.swing.JDialog addP;
+    private javax.swing.JTree ar;
+    private javax.swing.JComboBox<String> cdl;
+    private javax.swing.JComboBox<String> cdl1;
+    private javax.swing.JComboBox<String> cdl2;
+    private javax.swing.JDialog delC;
     private javax.swing.JDialog delP;
     private javax.swing.JComboBox<String> genero;
     private javax.swing.JComboBox<String> genero1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -792,8 +1454,20 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -816,26 +1490,41 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField launch;
     private javax.swing.JTextField launch1;
+    private javax.swing.JDialog listC;
     private javax.swing.JDialog listP;
+    private javax.swing.JDialog modC;
     private javax.swing.JDialog modP;
+    private javax.swing.JTextField nc;
+    private javax.swing.JTextField nc1;
     private javax.swing.JTextField np;
     private javax.swing.JTextField np1;
     private javax.swing.JComboBox<String> prg;
     private javax.swing.JComboBox<String> prg1;
+    private javax.swing.JComboBox<String> prg2;
+    private javax.swing.JComboBox<String> prg3;
     private javax.swing.JSpinner ptp;
     private javax.swing.JSpinner ptp1;
+    private javax.swing.JDialog svC;
     private javax.swing.JTable tb;
     private javax.swing.JComboBox<String> type;
     private javax.swing.JComboBox<String> type1;
     // End of variables declaration//GEN-END:variables
     private ArrayList<Programa> p = new ArrayList();
+    private ArrayList<Programa> aux = new ArrayList();
+    private ArrayList<ClaudiList> cl = new ArrayList();
 
     public void setProgramas() {
         DefaultComboBoxModel m = new DefaultComboBoxModel();
@@ -844,5 +1533,17 @@ public class Principal extends javax.swing.JFrame {
         }
         prg.setModel(m);
         prg1.setModel(m);
+        prg2.setModel(m);
+        prg3.setModel(m);
+    }
+
+    public void setListas() {
+        DefaultComboBoxModel m = new DefaultComboBoxModel();
+        for (int i = 0; i < cl.size(); i++) {
+            m.addElement(cl.get(i));
+        }
+        cdl.setModel(m);
+        cdl1.setModel(m);
+        cdl2.setModel(m);
     }
 }
